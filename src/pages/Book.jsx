@@ -118,7 +118,7 @@ const Book = () => {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/book/" + id);
+        const res = await axios.get("https://bookland.onrender.com/book/" + id);
         setBook(res.data);
       } catch {}
     };

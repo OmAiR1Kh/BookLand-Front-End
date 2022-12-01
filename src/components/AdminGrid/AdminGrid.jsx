@@ -16,7 +16,7 @@ const AdminView = () => {
     let res;
     const getBooks = async () => {
       try {
-        res = await axios.get("http://localhost:8000/books/all");
+        res = await axios.get("https://bookland.onrender.com/books/all");
       } catch (err) {
         console.log(err);
       }
@@ -28,7 +28,7 @@ const AdminView = () => {
   const handleDelete = async (id) => {
     let res;
     try {
-      res = await axios.delete(`http://localhost:8000/books/delete/${id}`);
+      res = await axios.delete(`https://bookland.onrender.com/books/delete/${id}`);
     } catch (err) {
       console.log(err);
     }

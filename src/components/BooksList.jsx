@@ -48,7 +48,7 @@ const BookList = (filters) => {
         let search = location.pathname.split("/")[4];
         try {
           res = await axios.get(
-            `http://localhost:8000/books/search/${searchType}/${search}`
+            `https://bookland.onrender.com/books/search/${searchType}/${search}`
           );
           setBooks(res.data);
         } catch (err) {
@@ -56,7 +56,7 @@ const BookList = (filters) => {
         }
       } else {
         try {
-          res = await axios.get(`http://localhost:8000/books/${id}`);
+          res = await axios.get(`https://bookland.onrender.com/books/${id}`);
           setBooks(res.data);
         } catch (err) {
           console.log(err);

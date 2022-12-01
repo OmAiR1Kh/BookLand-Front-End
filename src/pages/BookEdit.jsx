@@ -176,7 +176,7 @@ const BookEdit = () => {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/book/" + id);
+        const res = await axios.get("https://bookland.onrender.com/book/" + id);
         setBook(res.data);
       } catch (err) {
         console.log(err);
@@ -189,7 +189,7 @@ const BookEdit = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        "http://localhost:8000/book/edit/" + id,
+        "https://bookland.onrender.com/book/edit/" + id,
         null,
         {
           params: {

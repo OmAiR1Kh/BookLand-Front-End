@@ -53,7 +53,7 @@ const Slider = () => {
     let res;
     const getLatestBooks = async () => {
       try {
-        res = await axios.get(`http://localhost:8000/latestbooks/`);
+        res = await axios.get(`https://bookland.onrender.com/latestbooks/`);
         setLatestBooks(res.data);
       } catch (err) {
         console.log(err);
